@@ -10,7 +10,26 @@ body{
     filter: drop-shadow(1px 3px 5px #a3a3a3);
     overflow: hidden;
     display: flex;
+    z-index: 100;
 }
+
+.navbar-toggle{
+    margin: auto;
+}
+
+.navbar-toggle button{
+    background-color: #63B1AF; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
 
 .navbar-list{
     margin-left: auto;
@@ -57,8 +76,8 @@ body{
 .dashboard-background h2{
     color: #FFFFFF;
     position: absolute;
-    top: 50px;
-    left: 80px;
+    top: 5vh;
+    left: 5vw;
     display: flex;
 }
 .dashboard-background img{
@@ -68,15 +87,17 @@ body{
 
 .container-block{
     display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .container-block img{
-    object-fit: fill;
-    max-width: 40%;
+    object-fit: cover;
+    width: 40vw;
 }
 
 .container-block-header{
-    width: 100%;
+    width: 60vw;
     background-color: #A0DDDC;
 }
 
@@ -87,11 +108,12 @@ body{
 
 }
 .container-block-header p{
-    width: 100%;
+    width: auto;
     height: auto;
     background-color: #a0dddc;
     font-size: 18px;
-    
+    padding: 5px 20px;
+    text-align: justify;
 }
 
 .card-header{

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madrasah Diniyah Li-Tahfidzil Qur'an An-Nur</title>
+    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/indexStyle.css">
+    <link rel="stylesheet" href="./css/indexResponsive.css">
     <style>
 
 
@@ -14,10 +16,13 @@
     <nav class="navbar">
         <div class="navbar-logo">
             <a href="homepage.html">
-                <img src="logo madrasah diniyah annur.svg" alt="logo madrasah">
+                <img src="./img/logo madrasah diniyah annur.svg" alt="logo madrasah">
                 </a>
         </div>
-        <ul class="navbar-list">
+        <div class="navbar-toggle">
+            <button onclick="toggleNavbar()">Navbar</button>
+        </div>
+        <ul class="navbar-list" id="navbar-list">
             <li class="navbar-item">
                 <a href="#">BERANDA</a>
             </li>
@@ -34,18 +39,21 @@
     </nav>
     
 <div class="dashboard-background">
-    <h2>LOREM IPSUM SET DILIR AMET</h2>
+    <h2>Selamat Datang di Pendaftaran Santri Tahfidz</h2>
     <img src="./img/DSC_0308(1).JPG" alt="background" style="width: 100%;">
 </div>
 
 <div class="container-block">
     <div class="container-block-header">
-        <h3>LOREM IPSUM SET DILIR AMET</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+        <h3>Membangun Generasi Qu'ani Masa Depan Negeri</h3>
+        <p>
+            Bersama-sama, kita akan membentuk generasi yang tidak hanya menghafal Al-Qur'an, tetapi
+            juga memahami dan menerapkan ajarannya dalam kehidupan sehari-hari. Bergabunglah dengan
+            kami dan saksikan bagaimana setiap langkah kecil yang diambil oleh santri kami membentuk
+            masa depan yang gemilang untuk negeri ini.
+        </p>
     </div>
-        <img src="./img/DSC_0331.JPG" alt="">
+    <img src="./img/DSC_0331.JPG" alt="">
 </div>
 
 <div class="card-header">
@@ -55,28 +63,43 @@
     <div class="card">
         <img src="./img/DSC_0347.JPG" alt="">
         <div class="card-content">
-            <h4>LOREM IPSUM</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            <h4>Tradisi Pembelajaran Berkualitas</h4>
+            <p>
+                Kami menawarkan lingkungan pendidikan yang
+                menggabungkan kecintaan pada Al-Qur'an dengan metode pembelajaran modern.
+            </p>
         </div>
     </div>
     <div class="card">
         <img src="./img/DSC_0347.JPG" alt="">
         <div class="card-content">
-            <h4>LOREM IPSUM</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            <h4>Didukung oleh Ustadz Berpengalaman</h4>
+            <p>
+                Santri kami akan dibimbing oleh para ustadz
+                yang berpengalaman dan berkomitmen untuk membimbing mereka mencapai kemahiran
+                dalam menghafal dan memahami Al-Qur'an.
+            </p>
         </div>
     </div>
     <div class="card">
         <img src="./img/DSC_0347.JPG" alt="">
         <div class="card-content">
-            <h4>LOREM IPSUM</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            <h4>Kurikulum Terstruktur</h4>
+            <p>
+                Kurikulum kami dirancang secara hati-hati untuk memastikan
+                setiap santri kami mendapatkan pendidikan yang komprehensif dan berkesinambungan
+                dalam menghafal dan memahami Al-Qur'an.
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="./img/DSC_0347.JPG" alt="">
+        <div class="card-content">
+            <h4>Fasilitas Lengkap</h4>
+            <p>
+                Lingkungan belajar yang nyaman dan fasilitas lengkap untuk
+                mendukung proses pembelajaran yang optimal.
+            </p>
         </div>
     </div>
 </div>
@@ -95,4 +118,15 @@
 </div>
 
 </body>
+<script src="./js/functions.js"></script>
+<script>
+
+const navbarList = document.getElementById("navbar-list");
+
+function toggleNavbar(){
+    toggleDisplayFlex(navbarList);
+
+}
+
+</script>
 </html>
