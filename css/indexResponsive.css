@@ -1,0 +1,42 @@
+@media screen and (orientation:landscape) {
+    .navbar-toggle button{
+        display: none;
+    }
+}
+
+@media screen and (orientation:portrait) {
+.navbar-list{
+    flex-direction: row;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+}
+.dashboard-background h2{
+    top: 30px;
+    left: 0vw;
+}
+.container-block{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-block img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.container-block-header{
+    width: 100%;
+    background-color: #A0DDDC;
+}
+
+.container-block-header p{
+
+    padding: 20px 20px;
+
+}
+
+}
