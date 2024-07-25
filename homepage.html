@@ -121,41 +121,54 @@
         }
 
         .card-container{
-            height: auto;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             background-color: #A0DDDC;
             margin-top: 40px;
             box-sizing: border-box;
         }
 
         .card{
+            color: #232323;
             width: 300px;
-            overflow: hidden;
-            border-radius: 10px 10px 10px 10px;
-            margin: 30px;
+            vertical-align: top;
+            margin: 20px;
+            border-radius: 20px 20px 20px 20px;
+            transition: width 0.3s ease-in-out;
         }
 
         .card img{
             
             max-width: 100%;
+            height: 150%;
             height: auto;
             object-fit: cover;
         }
 
         .card-content{
             background-color: #F0F0F0;
-            padding: 5px;
+            padding: 20px;
         }
         .card-content h4{
             padding-top: 20px;
             margin: auto;
             text-align: center;
         }
+        .card:not(:last-child) {
+         margin-right: 20px;
+        }
+
+        .card:hover{
+            width: 320px;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
         .footer{
             background-color: #232323;
+            display: flex;
+            justify-content: space-between;
+
         }
 
         .footer img{
@@ -167,35 +180,53 @@
             padding: 30px;
             color: #FFFFFF;
         }
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-
+        iframe{
+            margin: 10px;
+            width: 30%;
+            height: 200px;
+            border-radius: 10px;
+        }
 .gallery {
-    display: flex;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img {
+
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+ .card-container {
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    gap: 10px;
+    align-items: center;
+}
+    
+    
+ .card{
+
+    
+    width: 80%; 
+    height: 50%;
+    margin-left: 50%px;
+  }
 }
 
-.gallery-item {
-    flex: 1 1 calc(25% - 20px);
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
-}
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
 
 
@@ -205,38 +236,38 @@
     <nav class="navbar">
         <div class="navbar-logo">
             <a href="homepage.html">
-                <img src="logo madrasah diniyah annur.svg" alt="logo madrasah">
+                <img src="img/logo madrasah diniyah annur.svg" alt="logo madrasah">
                 </a>
         </div>
         <ul class="navbar-list">
             <li class="navbar-item">
-                <a href="#">BERANDA</a>
+                <a href="homepage.html">BERANDA</a>
             </li>
             <li class="navbar-item">
-                <a href="#">PROGRAM</a>
+                <a href="program.html">PROGRAM</a>
             </li>
             <li class="navbar-item">
                 <a href="pendaftaran.html">PENDAFTARAN</a>
             </li>
             <li class="navbar-item">
-                <a href="#">TENTANG</a>
+                <a href="tentang.html">TENTANG</a>
             </li>
         </ul>
     </nav>
     
 <div class="dashboard-background">
-    <h2>LOREM IPSUM SET DILIR AMET</h2>
-    <img src="DSC_0308(1).JPG" alt="background" style="width: 100%;">
+    <h2>SELAMAT DATANG DI MADRASAH DINIYAH AN-NUR <br> LI TAHFIDZIL QURAN</h2>
+    <img src="img/DSC_0308(1).JPG" alt="background" style="width: 100%;">
 </div>
 
 <div class="container-block">
     <div class="container-block-header">
-        <h3>LOREM IPSUM SET DILIR AMET</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+        <h3>BELAJAR TAHFIDZ UNTUK SEKOLAH DASAR DAN SETARA</h3>
+        <p>Madrasah Diniyah Li Tahfidzil Qur'an An-Nur adalah<br>
+            kelompok mengaji khusus untuk murid sekolah dasar atau setara<br>
+            para santri Madrasah Diniyah An-Nur dapat belajar membaca qur'an bagi<br> yang baru memulai dan juga bisa ziyadah atau menambah hafalan qur'an </p>
     </div>
-        <img src="DSC_0331.JPG" alt="">
+        <img src="img/DSC_0331.JPG" alt="">
 </div>
 
 <div class="card-header">
@@ -245,34 +276,31 @@
 <div class="card-container">
     <a href="#">
     <div class="card">
-        <img src="DSC_0347.JPG" alt="">
+        <img src="img/DSC_0347.JPG" alt="">
         <div class="card-content">
-            <h4>LOREM IPSUM</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            <h4>MEMBACA IQRO'</h4>
+            <p>bagi santri yang baru belajar al-Qur'an bisa belajar iqro,<br>
+                dan untuk santri yang sudah fasih bisa melancarkan tajwid al-qur'an</p>
         </div>
     </div>
     </a>
     <a href="#">
     <div class="card">
-        <img src="DSC_0347.JPG" alt="">
+        <img src="img/DSC_0340.JPG" alt="">
         <div class="card-content">
-            <h4>LOREM IPSUM</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            <h4>ZIYADAH HAFALAN QUR'AN</h4>
+            <p>santri menghafal al-qur'an dengan minimal juz 30 lancar<br>
+                santri juga mengulang atau muroja'ah hafalan agar hafalan kuat</p>
         </div>
     </div>
     </a>
     <a href="#">
     <div class="card">
-        <img src="DSC_0347.JPG" alt="">
+        <img src="img/DSC_0339.JPG" alt="">
         <div class="card-content">
-            <h4>LOREM IPSUM</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            <h4>KELAS BAHASA INGGRIS DAN ARAB</h4>
+            <p>tiap minggu santri belajar bahasa arab dan inggris<br>
+                dengan ustadz yang fasih dalam bahasa inggris dan arab</p>
         </div>
     </div>
     </a>
@@ -283,29 +311,24 @@
 </div>
 
 <div class="gallery">
-<div class="gallery-item">
-    <img src="DSC_0331.JPG" alt="">        
-</div>
-<div class="gallery-item">
-    <img src="DSC_0331.JPG" alt="">        
-</div>
-<div class="gallery-item">
-    <img src="DSC_0331.JPG" alt="">        
-</div>
-<div class="gallery-item">
-    <img src="DSC_0331.JPG" alt="">        
-</div>
-<div class="gallery-item">
-    <img src="DSC_0331.JPG" alt="">        
-</div>
-<div class="gallery-item">
-    <img src="DSC_0331.JPG" alt="">        
-</div>
+    <img src="img/DSC_0354.JPG" alt="galeri madrasah">        
+    <img src="img/DSC_0386.JPG" alt="galeri madrasah">        
+    <img src="img/DSC_0408.JPG" alt="galeri madrasah">        
+    <img src="img/DSC_0412.JPG" alt="galeri madrasah">        
+    <img src="img/DSC_0436.JPG" alt="galeri madrasah">        
+    <img src="img/DSC_0441.JPG" alt="galeri madrasah">
+    <img src="img/DSC_0449.JPG" alt="galeri madrasah">        
+    <img src="img/DSC_0305.JPG" alt="galeri madrasah">                  
 </div>
 
 <div class="footer">
-    <img src="logo madrasah diniyah annur.svg" alt="logo madrasah">
+    <div>
+    <img src="img/logo madrasah diniyah annur.svg" alt="logo madrasah">
     <p>Jln. Persatuan 19, Kragilan, RT 04 RW 07, Pondok, <br> Condongcatur, Depok, Sleman, Yogyakarta</p>
+</div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.08610156961828!2d110.4055425!3d-7.7497109!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59745764c7bf%3A0x443570f3665087c4!2s7C24%2B476%2C%20Jl.%20Persatuan%20Condongcatur%2C%20Gempol%2C%20Minomartani%2C%20Kec.%20Ngaglik%2C%20Kabupaten%20Sleman%2C%20Daerah%20Istimewa%20Yogyakarta%2055281!5e0!3m2!1sid!2sid!4v1721887630565!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 </div>
     
 </body>
